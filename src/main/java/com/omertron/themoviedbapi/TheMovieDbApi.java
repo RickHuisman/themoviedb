@@ -137,18 +137,7 @@ public class TheMovieDbApi {
      * @param apiKey apiKey
      * @throws MovieDbException exception
      */
-    public TheMovieDbApi(String apiKey) throws MovieDbException {
-        this(apiKey, new SimpleHttpClientBuilder().build());
-    }
-
-    /**
-     * API for The Movie Db.
-     *
-     * @param apiKey apiKey
-     * @param httpClient The httpClient to use for web requests.
-     * @throws MovieDbException exception
-     */
-    public TheMovieDbApi(String apiKey, HttpClient httpClient) throws MovieDbException {
+    public TheMovieDbApi(String apiKey) {
         this.httpTools = new HttpTools();
         initialise(apiKey, httpTools);
     }
