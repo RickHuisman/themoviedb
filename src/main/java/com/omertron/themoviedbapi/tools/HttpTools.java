@@ -75,7 +75,7 @@ public class HttpTools {
             long retryCount = 0L;
 
             // If we have a 429 response, wait and try again
-            while (response.code() == STATUS_TOO_MANY_REQUESTS && retryCount++ <= RETRY_MAX) { delay(retryCount);
+            while (response.code() == STATUS_TOO_MANY_REQUESTS && retryCount++ <= RETRY_MAX) {
                 delay(retryCount);
 
                 // Retry the request
