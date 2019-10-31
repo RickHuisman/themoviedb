@@ -138,7 +138,7 @@ public class HttpTools {
     public String postRequest(final URL url, final String jsonBody) throws MovieDbException {
         final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
         Request request = new Request.Builder()
-                .url("https://api.github.com/markdown/raw")
+                .url(url)
                 .addHeader("Content-Type", APPLICATION_JSON)
                 .addHeader(HttpHeaders.ACCEPT, APPLICATION_JSON)
                 .post(RequestBody.create(JSON, jsonBody))
