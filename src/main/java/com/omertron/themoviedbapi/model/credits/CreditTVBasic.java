@@ -22,6 +22,7 @@ package com.omertron.themoviedbapi.model.credits;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.omertron.themoviedbapi.enumeration.MediaType;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author stuart.boston
@@ -39,7 +40,7 @@ public class CreditTVBasic extends CreditBasic implements Serializable {
     @JsonProperty("original_name")
     private String originalName;
     @JsonProperty("origin_country")
-    private String originCountry;
+    private List<String> originCountry;
 
     public CreditTVBasic() {
         setMediaType(MediaType.TV);
@@ -77,11 +78,11 @@ public class CreditTVBasic extends CreditBasic implements Serializable {
         this.originalName = originalName;
     }
 
-    public String getOriginCountry() {
+    public List<String> getOriginCountry() {
         return originCountry;
     }
 
-    public void setOriginCountry(String originCountry) {
+    public void setOriginCountry(List<String> originCountry) {
         this.originCountry = originCountry;
     }
 
